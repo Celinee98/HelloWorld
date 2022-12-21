@@ -1,0 +1,2684 @@
+{
+    "keywords": "Caseumbau Artikelumbau Dokument hinzufügen",
+    "success_message": "",
+    "created_at": "2020-05-28T10:09:10.717013+02:00",
+    "updated_at": "2022-12-15T13:16:34.789192+01:00",
+    "visible_by_employee": true,
+    "visible_by_user": true,
+    "request_editable_by_employee": false,
+    "request_editable_by_user": true,
+    "employee_organization_mandatory": true,
+    "linkeable_to_employee": true,
+    "linkeable_to_organization": true,
+    "employee_restrictions": [],
+    "user_restrictions": {
+        "roles": [{
+                "id": "hroc",
+                "name": "HR Sachbearbeiter"
+            }, {
+                "id": "admin-telefonica",
+                "name": "Admin (Access-All)"
+            }, {
+                "id": "psm",
+                "name": "Leader Solutions Manager (LSM)"
+            }, {
+                "id": "talent-manager",
+                "name": "Talent Manager"
+            }, {
+                "id": "admn-kb-artikel",
+                "name": "Admin (Redaktion)"
+            }, {
+                "id": "Adminpdefm",
+                "name": "Admin (Berechtigungen)"
+            }, {
+                "id": "labour-law",
+                "name": "Labour Law"
+            }, {
+                "id": "hr-it",
+                "name": "HR-IT"
+            }, {
+                "id": "hr-benefits",
+                "name": "HR Benefits"
+            }, {
+                "id": "hr-reward",
+                "name": "HR Reward"
+            }, {
+                "id": "payroll-coordinator",
+                "name": "Wage Tax"
+            }, {
+                "id": "labour-relations",
+                "name": "Labour Relation"
+            }, {
+                "id": "testrolle-br",
+                "name": "Testrolle Betriebsrat"
+            }
+        ]
+    },
+    "due_date_visible_by_employee": false,
+    "custom_status_visible_by_employee": true,
+    "enable_employee_feedback": false,
+    "formidable": {
+        "label": "Änderung im Portal anstoßen",
+        "description": "Caseumbau Artikelumbau Dokument hinzufügen",
+        "fields": [{
+                "type_id": "help_text",
+                "accesses": [{
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "description": "<p><img src=\"https://telefonica-de.requests.staging.eu.people-doc.com/files/prozess-2-stufig-2grau/ \"></p>",
+                "defaults": [],
+                "slug": "anweisungen-5",
+                "placeholder": null,
+                "validations": []
+            }, {
+                "slug": "anderung",
+                "label": "Welche Änderung soll vorgenommen werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Case/Formular - Neu",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Case/Formular - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Case/Formular - Löschen",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Artikel People Portal - Neu",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Artikel People Portal - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "Artikel People Portal - Löschen",
+                        "description": null
+                    }, {
+                        "value": "val7",
+                        "label": "Dokument - Neu",
+                        "description": null
+                    }, {
+                        "value": "val8",
+                        "label": "Dokument - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val9",
+                        "label": "Dokument - Löschen",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "anderungsart",
+                "label": "Änderungsart",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Rechtschreibung",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Anfragesteller ändern",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Freigaben ändern",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Inhaltliche Änderung",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Sonstiges",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "anderungsart_artikel",
+                "label": "Änderungsart Artikel",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Rechtschreibung",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Inhaltliche Änderung",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Sonstiges",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, 
+            // Neues Feld Priorität
+            {
+                "slug": "ENUM_prioritat",
+                "label": "Welche Priorität hat die Anforderung?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "Niedrig",
+                        "label": "Niedrig",
+                        "description": null
+                    }, {
+                        "value": "Mittel",
+                        "label": "Mittel",
+                        "description": null
+                    }, {
+                        "value": "Hoch",
+                        "label": "Hoch",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            },
+            {
+                "slug": "kategorie",
+                "label": "Kategorie",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Abschied von Telefónica",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Abwesenheit",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Arbeitszeit",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "BR- und SBV-Anhörungen",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Deine Daten & Dein Vertrag",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "Disziplinarische Maßnahmen",
+                        "description": null
+                    }, {
+                        "value": "val7",
+                        "label": "Familie",
+                        "description": null
+                    }, {
+                        "value": "val8",
+                        "label": "Gehalt",
+                        "description": null
+                    }, {
+                        "value": "val9",
+                        "label": "Gesundheit & Krankheit",
+                        "description": null
+                    }, {
+                        "value": "val10",
+                        "label": "HR Intern",
+                        "description": null
+                    }, {
+                        "value": "val11",
+                        "label": "Informationen für Führungskräfte",
+                        "description": null
+                    }, {
+                        "value": "val12",
+                        "label": "Meine Daten",
+                        "description": null
+                    }, {
+                        "value": "val13",
+                        "label": "Nebenleistungen",
+                        "description": null
+                    }, {
+                        "value": "val14",
+                        "label": "Recruiting/Einstellung neuer Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val15",
+                        "label": "Urlaub",
+                        "description": null
+                    }, {
+                        "value": "val16",
+                        "label": "Versteuerung",
+                        "description": null
+                    }, {
+                        "value": "val17",
+                        "label": "Vertragsgestaltung meiner Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val18",
+                        "label": "Weiterentwicklung",
+                        "description": null
+                    }, {
+                        "value": "val19",
+                        "label": "Willkommen bei Telefónica",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "formname",
+                "label": "Name des Case/Formular",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "schlusselworter",
+                "label": "Schlüsselwörter",
+                "type_id": "text",
+                "placeholder": null,
+                "description": "<p>Schlüsselwörter erleichtern die Suche für einen Case oder Artikel</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "beschreibung",
+                "label": "Beschreibung",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": "<p>Bitte beschreibe die Änderung so detailiert wie möglich.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "formularstellen",
+                "label": "Wer kann das Formular stellen?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": "<p>Mehrfachantworten möglich.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Führungskraft",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Assistenz",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "HR - TM",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "HR - HROC",
+                        "description": null
+                    }
+                ]
+            }, {
+                "type_id": "help_text",
+                "accesses": [{
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "description": "<p>Einschränkung auf Gesellschaften (Mehrfachnennung möglich)</p>",
+                "defaults": [],
+                "slug": "anweisungen-4",
+                "placeholder": null,
+                "validations": []
+            }, {
+                "slug": "alle",
+                "label": "Alle Gesellschaften",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "ohg",
+                "label": "Telefónica Germany GmbH & Co. OHG",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "retail",
+                "label": "Telefónica Germany Retail GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "bremen",
+                "label": "TGCS Bremen GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "nurnberg",
+                "label": "TGCS Nürnberg GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "rostock",
+                "label": "TGCS Rostock GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "hamburg",
+                "label": "TGCS Hamburg GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "ayyildiz",
+                "label": "Ay Yildiz Communications GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "ortel",
+                "label": "Ortel Mobile GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "tgr",
+                "label": "Telefónica Global Roaming GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "tgs",
+                "label": "Telefónica Global Services GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "tfs",
+                "label": "TCFS Potsdam GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "accesses": [{
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "tgbs",
+                "label": "Telefonica Germany Business Sales",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "welche-inhalte-sollen-abgefragt-werden",
+                "label": "Welche Inhalte sollen abgefragt werden?",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": "<p>Beschreibe bitte so genau wie möglich.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "vorlage-fur-den-case-anhang",
+                "label": "Vorlage für den Case",
+                "type_id": "file",
+                "placeholder": null,
+                "description": "<p>Sollten hier mehrer Satzbausteine genutzt werden, so dokumentiere sie bitte in Word und lade sie an dieser Stelle hoch.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null
+            }, {
+                "slug": "abrechnungsrelevante_felder",
+                "label": "Handelt es sich hierbei um abrechnungsrelevante Felder?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": "<p>Bitte gib an, ob die Feldinformationen auch an den Gehaltsabrechner weitergeleitet werden sollen.&nbsp;</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "y",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "n",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "freigabeerforderlich",
+                "label": "Ist eine Freigabe erforderlich?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "wer-soll-den-case-freigeben",
+                "label": "Wer soll den Case freigeben?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val2",
+                        "label": "Führungskraft",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "HR - TM",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "HR - HROC",
+                        "description": null
+                    }
+                ]
+            }, {
+                "slug": "reihenfolgefreigaben",
+                "label": "Gebe die Reihenfolge der Freigaben an",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "dokument",
+                "label": "Soll ein Dokument generiert werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "namedesdokument",
+                "label": "Name des Dokuments",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "unterschrift",
+                "label": "Muss das Dokument vom Mitarbeiter unterschrieben werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "mitarbeiterakteabgelegt",
+                "label": "Wird das Dokument in der Mitarbeiterakte abgelegt?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "register-der-efm",
+                "label": "Register der EFM",
+                "type_id": "text",
+                "placeholder": null,
+                "description": "<p>Gebe hier das Register an, in dem das Dokument abgelegt werden soll.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "zustellungdokumente",
+                "label": "Zustellungsart der Dokumente",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "HIDDEN"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "HIDDEN"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "HIDDEN"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Post",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "E-Mail",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Nur Ablage in der EFM",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Übergabe nur durch Führungskraft",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Führungskraft und Post",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "E-Mail und Post",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "vorlage-dokument",
+                "label": "Vorlage Dokument",
+                "type_id": "file",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null
+            }, {
+                "slug": "successfactors",
+                "label": "Ist in diesem Prozess eine Anpassung in SuccessFactors erforderlich?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "formularartikel",
+                "label": "Gibt es zu diesem Formular einen Artikel im People Portal?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja, bitte mit ändern",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Ja, keine Änderung erforderlich",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Nein, es muss aber einer erstellt werden",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Nein, es ist keiner erforderlich",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "nameartikel",
+                "label": "Name des Artikels",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "wannartikelonline",
+                "label": "Zu wann soll der Artikel online gehen?",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "newspeopleportal",
+                "label": "Soll eine News im People Portal gestellt werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false
+            }, {
+                "slug": "name-der-news",
+                "label": "Name der News",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "newstext",
+                "label": "News Text",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "wannnews",
+                "label": "Zu wann soll die News online gehen?",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "slug": "werdarfdenartikelsehen",
+                "label": "Wer darf den Artikel sehen?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Alle (Mitarbeiter & Führungskräfte)",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nur Führungskräfte",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "HR-intern",
+                        "description": null
+                    }
+                ]
+            }, {
+                "slug": "vorlage-people-portal",
+                "label": "Vorlage People Portal",
+                "type_id": "file",
+                "placeholder": null,
+                "description": "<p>Lade hier bitte die ausgefüllte&nbsp;<a href=\"https://telefonica-de.requests.staging.eu.people-doc.com/files/vorlage-anderung-im-people-portal/ \" target=\"_blank\">Vorlage&nbsp;</a>hoch.</p>",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null
+            }, {
+                "slug": "begrundung",
+                "label": "Begründung",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "REQUIRED"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "REQUIRED"
+                    }
+                ],
+                "validations": [],
+                "defaults": []
+            }, {
+                "type_id": "help_text",
+                "accesses": [{
+                        "access_id": "API",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "EMPLOYEE",
+                        "level": "EDITABLE"
+                    }, {
+                        "access_id": "MANAGER",
+                        "level": "EDITABLE"
+                    }
+                ],
+                "description": "<p>Bei dieser Änderung muss der Betriebsrat angehört werden. Bitte berücksichtige, dass sich hierdurch eine Vorlauffrist ergibt.&nbsp;</p>",
+                "defaults": [],
+                "slug": "anweisungen",
+                "placeholder": null,
+                "validations": []
+            }
+        ],
+        "id": 26205,
+        "conditions": [{
+                "name": null,
+                "fields_ids": ["formname", "kategorie", "schlusselworter", "formularstellen", "welche-inhalte-sollen-abgefragt-werden", "vorlage-fur-den-case-anhang", "freigabeerforderlich", "dokument", "formularartikel", "successfactors", "anweisungen", "anweisungen-4", "alle", "ohg", "retail", "bremen", "nurnberg", "rostock", "hamburg", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "abrechnungsrelevante_felder", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formname", "anderungsart", "kategorie", "anweisungen-4", "alle", "ohg", "retail", "bremen", "nurnberg", "rostock", "hamburg", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formname", "formularartikel"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["vorlage-people-portal", "nameartikel", "werdarfdenartikelsehen", "wannartikelonline", "newspeopleportal", "hamburg", "rostock", "nurnberg", "bremen", "retail", "ohg", "alle", "anweisungen-4", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["kategorie", "nameartikel", "anderungsart_artikel", "anweisungen-4", "alle", "ohg", "retail", "bremen", "nurnberg", "rostock", "hamburg", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["nameartikel"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val6"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "unterschrift", "mitarbeiterakteabgelegt", "zustellungdokumente", "vorlage-dokument", "formname", "anweisungen-4", "alle", "ohg", "retail", "bremen", "nurnberg", "rostock", "hamburg", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val7"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formname", "namedesdokument", "unterschrift", "mitarbeiterakteabgelegt", "zustellungdokumente", "vorlage-dokument", "anweisungen-4", "alle", "ohg", "retail", "bremen", "nurnberg", "rostock", "hamburg", "ayyildiz", "ortel", "tgr", "tgs", "tfs", "tgbs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val8"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "formname"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val9"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["freigabeerforderlich", "reihenfolgefreigaben", "anweisungen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["welche-inhalte-sollen-abgefragt-werden", "dokument", "successfactors", "anweisungen", "abrechnungsrelevante_felder"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formularstellen", "anweisungen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung", "anweisungen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["wer-soll-den-case-freigeben", "reihenfolgefreigaben"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "freigabeerforderlich",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["unterschrift", "mitarbeiterakteabgelegt", "namedesdokument", "zustellungdokumente", "vorlage-dokument"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "dokument",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["nameartikel", "vorlage-people-portal"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["nameartikel", "werdarfdenartikelsehen", "vorlage-people-portal"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["name-der-news", "newstext", "wannnews"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "newspeopleportal",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["register-der-efm"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "mitarbeiterakteabgelegt",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["begrundung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["begrundung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["vorlage-people-portal", "newspeopleportal", "werdarfdenartikelsehen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }
+        ],
+        "version": 5
+    },
+    "form_type": "Editable",
+    "form_definition": {
+        "label": "Änderung im Portal anstoßen",
+        "description": "Caseumbau Artikelumbau Dokument hinzufügen",
+        "fields": [{
+                "type_id": "help_text",
+                "description": "<p><img src=\"https://apis.staging.eu.people-doc.com/api/v2/employee/article_documents/prozess-2-stufig-2grau \"></p>",
+                "defaults": [],
+                "slug": "anweisungen-5",
+                "placeholder": null,
+                "validations": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "anderung",
+                "label": "Welche Änderung soll vorgenommen werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Case/Formular - Neu",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Case/Formular - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Case/Formular - Löschen",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Artikel People Portal - Neu",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Artikel People Portal - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "Artikel People Portal - Löschen",
+                        "description": null
+                    }, {
+                        "value": "val7",
+                        "label": "Dokument - Neu",
+                        "description": null
+                    }, {
+                        "value": "val8",
+                        "label": "Dokument - Ändern",
+                        "description": null
+                    }, {
+                        "value": "val9",
+                        "label": "Dokument - Löschen",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "anderungsart",
+                "label": "Änderungsart",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Rechtschreibung",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Anfragesteller ändern",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Freigaben ändern",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Inhaltliche Änderung",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Sonstiges",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "anderungsart_artikel",
+                "label": "Änderungsart Artikel",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Rechtschreibung",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Inhaltliche Änderung",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Sonstiges",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            },
+            // Neues Feld Priorität
+            {
+                "slug": "ENUM_prioritat",
+                "label": "Welche Priorität hat die Anforderung?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "Niedrig",
+                        "label": "Niedrig",
+                        "description": null
+                    }, {
+                        "value": "Mittel",
+                        "label": "Mittel",
+                        "description": null
+                    }, {
+                        "value": "Hoch",
+                        "label": "Hoch",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            },            
+            {
+                "slug": "kategorie",
+                "label": "Kategorie",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Abschied von Telefónica",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Abwesenheit",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Arbeitszeit",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "BR- und SBV-Anhörungen",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "Deine Daten & Dein Vertrag",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "Disziplinarische Maßnahmen",
+                        "description": null
+                    }, {
+                        "value": "val7",
+                        "label": "Familie",
+                        "description": null
+                    }, {
+                        "value": "val8",
+                        "label": "Gehalt",
+                        "description": null
+                    }, {
+                        "value": "val9",
+                        "label": "Gesundheit & Krankheit",
+                        "description": null
+                    }, {
+                        "value": "val10",
+                        "label": "HR Intern",
+                        "description": null
+                    }, {
+                        "value": "val11",
+                        "label": "Informationen für Führungskräfte",
+                        "description": null
+                    }, {
+                        "value": "val12",
+                        "label": "Meine Daten",
+                        "description": null
+                    }, {
+                        "value": "val13",
+                        "label": "Nebenleistungen",
+                        "description": null
+                    }, {
+                        "value": "val14",
+                        "label": "Recruiting/Einstellung neuer Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val15",
+                        "label": "Urlaub",
+                        "description": null
+                    }, {
+                        "value": "val16",
+                        "label": "Versteuerung",
+                        "description": null
+                    }, {
+                        "value": "val17",
+                        "label": "Vertragsgestaltung meiner Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val18",
+                        "label": "Weiterentwicklung",
+                        "description": null
+                    }, {
+                        "value": "val19",
+                        "label": "Willkommen bei Telefónica",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "formname",
+                "label": "Name des Case/Formular",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "schlusselworter",
+                "label": "Schlüsselwörter",
+                "type_id": "text",
+                "placeholder": null,
+                "description": "<p>Schlüsselwörter erleichtern die Suche für einen Case oder Artikel</p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "beschreibung",
+                "label": "Beschreibung",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": "<p>Bitte beschreibe die Änderung so detailiert wie möglich.</p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "formularstellen",
+                "label": "Wer kann das Formular stellen?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": "<p>Mehrfachantworten möglich.</p>",
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Mitarbeiter",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Führungskraft",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Assistenz",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "HR - TM",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "HR - HROC",
+                        "description": null
+                    }
+                ],
+                "disabled": false,
+                "required": true
+            }, {
+                "type_id": "help_text",
+                "description": "<p>Einschränkung auf Gesellschaften (Mehrfachnennung möglich)</p>",
+                "defaults": [],
+                "slug": "anweisungen-4",
+                "placeholder": null,
+                "validations": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "alle",
+                "label": "Alle Gesellschaften",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "ohg",
+                "label": "Telefónica Germany GmbH & Co. OHG",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "retail",
+                "label": "Telefónica Germany Retail GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "bremen",
+                "label": "TGCS Bremen GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "nurnberg",
+                "label": "TGCS Nürnberg GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "rostock",
+                "label": "TGCS Rostock GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "hamburg",
+                "label": "TGCS Hamburg GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "ayyildiz",
+                "label": "Ay Yildiz Communications GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "ortel",
+                "label": "Ortel Mobile GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "tgr",
+                "label": "Telefónica Global Roaming GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "tgs",
+                "label": "Telefónica Global Services GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "tfs",
+                "label": "TCFS Potsdam GmbH",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "tgbs",
+                "label": "Telefonica Germany Business Sales",
+                "type_id": "checkbox",
+                "placeholder": null,
+                "description": "<p><br></p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "welche-inhalte-sollen-abgefragt-werden",
+                "label": "Welche Inhalte sollen abgefragt werden?",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": "<p>Beschreibe bitte so genau wie möglich.</p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "vorlage-fur-den-case-anhang",
+                "label": "Vorlage für den Case",
+                "type_id": "file",
+                "placeholder": null,
+                "description": "<p>Sollten hier mehrer Satzbausteine genutzt werden, so dokumentiere sie bitte in Word und lade sie an dieser Stelle hoch.</p>",
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null,
+                "disabled": false,
+                "required": false
+            }, {
+                "slug": "abrechnungsrelevante_felder",
+                "label": "Handelt es sich hierbei um abrechnungsrelevante Felder?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": "<p>Bitte gib an, ob die Feldinformationen auch an den Gehaltsabrechner weitergeleitet werden sollen.&nbsp;</p>",
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "y",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "n",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "freigabeerforderlich",
+                "label": "Ist eine Freigabe erforderlich?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "wer-soll-den-case-freigeben",
+                "label": "Wer soll den Case freigeben?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val2",
+                        "label": "Führungskraft",
+                        "description": null
+                    }, {
+                        "value": "val5",
+                        "label": "HR - TM",
+                        "description": null
+                    }, {
+                        "value": "val6",
+                        "label": "HR - HROC",
+                        "description": null
+                    }
+                ],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "reihenfolgefreigaben",
+                "label": "Gebe die Reihenfolge der Freigaben an",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "dokument",
+                "label": "Soll ein Dokument generiert werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "namedesdokument",
+                "label": "Name des Dokuments",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "unterschrift",
+                "label": "Muss das Dokument vom Mitarbeiter unterschrieben werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "mitarbeiterakteabgelegt",
+                "label": "Wird das Dokument in der Mitarbeiterakte abgelegt?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "register-der-efm",
+                "label": "Register der EFM",
+                "type_id": "text",
+                "placeholder": null,
+                "description": "<p>Gebe hier das Register an, in dem das Dokument abgelegt werden soll.</p>",
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "vorlage-dokument",
+                "label": "Vorlage Dokument",
+                "type_id": "file",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "successfactors",
+                "label": "Ist in diesem Prozess eine Anpassung in SuccessFactors erforderlich?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "formularartikel",
+                "label": "Gibt es zu diesem Formular einen Artikel im People Portal?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja, bitte mit ändern",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Ja, keine Änderung erforderlich",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "Nein, es muss aber einer erstellt werden",
+                        "description": null
+                    }, {
+                        "value": "val4",
+                        "label": "Nein, es ist keiner erforderlich",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "nameartikel",
+                "label": "Name des Artikels",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "wannartikelonline",
+                "label": "Zu wann soll der Artikel online gehen?",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "newspeopleportal",
+                "label": "Soll eine News im People Portal gestellt werden?",
+                "type_id": "dropdown",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Ja",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nein",
+                        "description": null
+                    }
+                ],
+                "multiple": false,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "name-der-news",
+                "label": "Name der News",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "newstext",
+                "label": "News Text",
+                "type_id": "paragraph",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "wannnews",
+                "label": "Zu wann soll die News online gehen?",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "werdarfdenartikelsehen",
+                "label": "Wer darf den Artikel sehen?",
+                "type_id": "checkboxes",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "items": [{
+                        "value": "val1",
+                        "label": "Alle (Mitarbeiter & Führungskräfte)",
+                        "description": null
+                    }, {
+                        "value": "val2",
+                        "label": "Nur Führungskräfte",
+                        "description": null
+                    }, {
+                        "value": "val3",
+                        "label": "HR-intern",
+                        "description": null
+                    }
+                ],
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "vorlage-people-portal",
+                "label": "Vorlage People Portal",
+                "type_id": "file",
+                "placeholder": null,
+                "description": "<p>Lade hier bitte die ausgefüllte&nbsp;<a href=\"https://apis.staging.eu.people-doc.com/api/v2/employee/article_documents/vorlage-anderung-im-people-portal \" target=\"_blank\">Vorlage&nbsp;</a>hoch.</p>",
+                "validations": [],
+                "defaults": [],
+                "parameters": {
+                    "doctype_id": null
+                },
+                "doctype_id": null,
+                "disabled": false,
+                "required": true
+            }, {
+                "slug": "begrundung",
+                "label": "Begründung",
+                "type_id": "text",
+                "placeholder": null,
+                "description": null,
+                "validations": [],
+                "defaults": [],
+                "disabled": false,
+                "required": true
+            }, {
+                "type_id": "help_text",
+                "description": "<p>Bei dieser Änderung muss der Betriebsrat angehört werden. Bitte berücksichtige, dass sich hierdurch eine Vorlauffrist ergibt.&nbsp;</p>",
+                "defaults": [],
+                "slug": "anweisungen",
+                "placeholder": null,
+                "validations": [],
+                "disabled": false,
+                "required": false
+            }
+        ],
+        "id": 26205,
+        "conditions": [{
+                "name": null,
+                "fields_ids": ["freigabeerforderlich", "nurnberg", "anweisungen", "retail", "anweisungen-4", "schlusselworter", "successfactors", "welche-inhalte-sollen-abgefragt-werden", "dokument", "formularartikel", "tfs", "kategorie", "abrechnungsrelevante_felder", "ohg", "vorlage-fur-den-case-anhang", "alle", "ayyildiz", "tgbs", "tgr", "hamburg", "formularstellen", "rostock", "bremen", "ortel", "formname", "tgs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["alle", "ayyildiz", "rostock", "anderungsart", "anweisungen-4", "bremen", "nurnberg", "ortel", "tgbs", "tgr", "retail", "hamburg", "tfs", "kategorie", "ohg", "formname", "tgs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formularartikel", "formname"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["nurnberg", "tgs", "retail", "anweisungen-4", "tfs", "wannartikelonline", "ohg", "alle", "ayyildiz", "tgbs", "tgr", "werdarfdenartikelsehen", "nameartikel", "hamburg", "rostock", "bremen", "ortel", "vorlage-people-portal", "newspeopleportal"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["alle", "anderungsart_artikel", "ayyildiz", "rostock", "anweisungen-4", "bremen", "nurnberg", "ortel", "tgbs", "tgr", "retail", "nameartikel", "hamburg", "tfs", "kategorie", "ohg", "tgs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["nameartikel"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val6"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "nurnberg", "unterschrift", "retail", "vorlage-dokument", "anweisungen-4", "tfs", "ohg", "alle", "ayyildiz", "tgbs", "tgr", "mitarbeiterakteabgelegt", "hamburg", "rostock", "bremen", "ortel", "formname", "tgs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val7"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "nurnberg", "unterschrift", "retail", "vorlage-dokument", "anweisungen-4", "tfs", "ohg", "alle", "ayyildiz", "tgbs", "tgr", "mitarbeiterakteabgelegt", "hamburg", "rostock", "bremen", "ortel", "formname", "tgs"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val8"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "formname"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderung",
+                        "operator": "eq",
+                        "values": ["val9"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["freigabeerforderlich", "anweisungen", "reihenfolgefreigaben"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["successfactors", "welche-inhalte-sollen-abgefragt-werden", "dokument", "anweisungen", "abrechnungsrelevante_felder"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["formularstellen", "anweisungen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung", "anweisungen"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["reihenfolgefreigaben", "wer-soll-den-case-freigeben"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "freigabeerforderlich",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["namedesdokument", "vorlage-dokument", "mitarbeiterakteabgelegt", "unterschrift"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "dokument",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["vorlage-people-portal", "nameartikel"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["werdarfdenartikelsehen", "nameartikel", "vorlage-people-portal"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val3"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["wannnews", "name-der-news", "newstext"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "newspeopleportal",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["register-der-efm"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "mitarbeiterakteabgelegt",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["begrundung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val2"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["begrundung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "formularartikel",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["vorlage-people-portal", "werdarfdenartikelsehen", "newspeopleportal"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val4"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val1"]
+                    }
+                ]
+            }, {
+                "name": null,
+                "fields_ids": ["beschreibung"],
+                "action": "display_iff",
+                "tests": [{
+                        "field_id": "anderungsart_artikel",
+                        "operator": "eq",
+                        "values": ["val5"]
+                    }
+                ]
+            }
+        ],
+        "version": 5
+    },
+    "id": "anderung-in-people-doc",
+    "name": "Änderung im Portal anstoßen",
+    "is_default": false,
+    "category_id": "dein-team",
+    "featured": false,
+    "language_code": "de",
+    "never_visible_by_employee": false
+}
