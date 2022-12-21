@@ -213,7 +213,6 @@
                 ],
                 "multiple": false
             }, 
-            // Neues Feld Priorität
             {
                 "slug": "ENUM_prioritat",
                 "label": "Welche Priorität hat die Anforderung?",
@@ -221,7 +220,7 @@
                 "placeholder": null,
                 "description": null,
                 "accesses": [{
-                        "access_id": "API",
+                        "access_id": "API", 
                         "level": "REQUIRED"
                     }, {
                         "access_id": "MANAGER",
@@ -1725,7 +1724,6 @@
                 "disabled": false,
                 "required": true
             },
-            // Neues Feld Priorität
             {
                 "slug": "ENUM_prioritat",
                 "label": "Welche Priorität hat die Anforderung?",
@@ -1751,7 +1749,7 @@
                 "multiple": false,
                 "disabled": false,
                 "required": true
-            },            
+            },    
             {
                 "slug": "kategorie",
                 "label": "Kategorie",
