@@ -214,7 +214,7 @@
                 "multiple": false
             }, 
             {
-                "slug": "ENUM_prioritat",
+                "slug": "ENUM_prioritaet",
                 "label": "Welche Priorität hat die Anforderung?",
                 "type_id": "dropdown",
                 "placeholder": null,
@@ -1725,7 +1725,7 @@
                 "required": true
             },
             {
-                "slug": "ENUM_prioritat",
+                "slug": "ENUM_prioritaet",
                 "label": "Welche Priorität hat die Anforderung?",
                 "type_id": "dropdown",
                 "placeholder": null,
